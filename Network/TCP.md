@@ -8,13 +8,13 @@
 
 ### **3 way handshake**
 
-통신하기 앞서, 논리적인 접속을 성립하기위해 3 way handshake 과정을 진행한다.
+<u>통신하기 앞서</u>, 논리적인 접속을 성립하기위해 3 way handshake 과정을 진행한다.
 
-Server는 포트가 열린 상태로 연결 요청 대기중 (LISTEN)
+**Server:** 포트가 열린 상태로 연결 요청 대기중 (LISTEN)
 
-Client는 포트가 닫힌 상태 (Closed)
+**Client:** 포트가 닫힌 상태 (Closed)
 
-<img src="image/3_way_handshake.JPG" alt="3_way_handshake" style="zoom:50%;" />
+<img src="image/3_way_handshake.JPG" alt="3_way_handshake" style="zoom:35%;" />
 
 출처: https://hyeonstorage.tistory.com/286
 
@@ -33,14 +33,15 @@ Client는 포트가 닫힌 상태 (Closed)
 
 ### **4 way handshake**
 
-통신을 해제하기 위해 4 way handshake 과정을 진행한다.
+<u>통신을 해제</u>하기 위해 4 way handshake 과정을 진행한다.
 
 Server와 Client 모두 ESTABLISHED 상태
 
-<img src="image/4_way_handshake.JPG" alt="4_way_handshake" style="zoom:50%;" />
+<img src="image/4_way_handshake.JPG" alt="4_way_handshake" style="zoom:35%;" />
 
 1. Client는 Server에게 FIN(연결종료)을 보낸다.
 2. Server는 FIN을 받고, 확인했다는 ACK를 Client에게 보낸다. 
 3. 데이터를 모두 보내면, FIN을 Client에게 보낸다.
-4. Client는 FIN을 받고, 확인했다는 ACK를 서버에게 보낸다. (서버로 부터 아직 받지 못한 데이터가 있을 수 있어 TIME_WAIT로 대기) 
+4. Client는 FIN을 받고, 확인했다는 ACK를 서버에게 보낸다. 
+   (서버로 부터 아직 받지 못한 데이터가 있을 수 있어 TIME_WAIT로 대기) 
 5. 이후 둘다 Closed => 연결해제
