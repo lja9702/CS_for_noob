@@ -80,7 +80,7 @@ Server와 Client 모두 ESTABLISHED 상태
 
 #### Stop and Wait
 
-<img src="D:/하영/공부/스터디/CS_for_noob/Network/image/flow_control.png" alt="Stop_and_Wait" style="zoom:100%;" />
+<img src="image/flow_control.png" alt="Stop_and_Wait" style="zoom:100%;" />
 
 Timeout 시간안에 ACK가 도착하면 그 다음 데이터를 전송
 
@@ -96,7 +96,7 @@ Timeout 시간안에 ACK가 도착하면 그 다음 데이터를 전송
 >
 > 수신자의 여유 버퍼에 따라 윈도우를 크기를 동적으로 제어
 
-<img src="D:/하영/공부/스터디/CS_for_noob/Network/image/sliding_window.png" alt="sliding_window" style="zoom:100%;" />
+<img src="image/sliding_window.png" alt="sliding_window" style="zoom:100%;" />
 
 TCP/IP를 사용하는 호스들은 Receive/Send 윈도우를 보유
 
