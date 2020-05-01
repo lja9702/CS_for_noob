@@ -27,4 +27,4 @@
 
 ### 쿠키와 세션 비교
 
-![](image\Cookie_Session.png)
+<img src="image/Cookie_Session.png" width="100%" height="100%"/>
