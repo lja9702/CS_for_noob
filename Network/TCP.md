@@ -44,15 +44,21 @@ Server와 Client 모두 ESTABLISHED 상태
 <img src="image/4_way_handshake.JPG" alt="4_way_handshake" width="80%" height="80%" />
 
 1. Client는 Server에게 FIN(연결종료)을 보낸다.
+
 2. Server는 FIN을 받고, 확인했다는 ACK를 Client에게 보낸다. 
+
 3. 데이터를 모두 보내면, FIN을 Client에게 보낸다.
+
 4. Client는 FIN을 받고, 확인했다는 ACK를 서버에게 보낸다. 
    (서버로 부터 아직 받지 못한 데이터가 있을 수 있어 TIME_WAIT로 대기) 
+   
 5. 이후 둘다 Closed => 연결해제
 
+   
 
+----------------------
 
-## TCP 흐름제어
+### **TCP 흐름제어**
 
 > TCP는 신뢰성있는 전송을 보장
 >
@@ -69,16 +75,15 @@ Server와 Client 모두 ESTABLISHED 상태
 3. 만약 송신자의 처리 속도가 수신자보다 빠를 경우에는?
 4. 언젠가 수신자의 버퍼는 꽉차게 되고 나머지 데이터는 손실 ~~신뢰성의 TCP~~ 
 
-*****
-
-### 방식
+#### 방식
 
 1. Stop and Wait 방식
+
 2. **Windowing 방식**
 
-*****
+   
 
-#### Stop and Wait
+#### **1. Stop and Wait**
 
 <img src="image/flow_control.png" alt="Stop_and_Wait" style="zoom:100%;" />
 
@@ -86,9 +91,9 @@ Timeout 시간안에 ACK가 도착하면 그 다음 데이터를 전송
 
 하나 받고 하나 보내는 방식이기 때문에 **비효율적**
 
-*****
 
-#### Windowing 방식 (Sliding Window) 
+
+#### **2. Windowing 방식 (Sliding Window)**
 
 > 하나씩 보내는 Stop-and-Wait와 달리 여러 데이터를 한번에 보내는 방식
 >
