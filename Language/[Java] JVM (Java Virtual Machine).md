@@ -19,6 +19,8 @@
 
 
 
+
+
 --------------------
 
 #### **Java 프로그램의 실행 과정**
@@ -40,6 +42,8 @@
    > 이때 JVM은 필요에 따라 스레드 동기화, GC 등의 관리작업을 수행
 
 <img src="image/JVM.png" width="80%" height="80%" />
+
+
 
 
 
@@ -67,6 +71,8 @@
   > **JIT (Just - In - Time) complier**
   >
   > 인터프리터 방식으로 실행하다가 적절한 시점에 바이트코드 전체를 컴파일하여 *네이티브 코드*로 변경하고, 이후에는 인터프리팅하지 않고 네이티브 코드로 직접 실행하는 방식
+
+
 
 
 
@@ -174,14 +180,21 @@
 
      
 
+
+
 *Method Area: **클래스 데이터**를 위한 공간*
 
 *Heap Area: **객체**를 위한 공간*
 
 
 
+
+
 참고: https://asfirstalways.tistory.com/158
-          [https://medium.com/@lazysoul/jvm-%EC%9D%B4%EB%9E%80-c142b01571f2](https://medium.com/@lazysoul/jvm-이란-c142b01571f2)
-          https://www.geeksforgeeks.org/java-memory-management/
-          https://johngrib.github.io/wiki/java8-why-permgen-removed/
+
+[https://medium.com/@lazysoul/jvm-%EC%9D%B4%EB%9E%80-c142b01571f2](https://medium.com/@lazysoul/jvm-이란-c142b01571f2)
+
+https://www.geeksforgeeks.org/java-memory-management/
+
+https://johngrib.github.io/wiki/java8-why-permgen-removed/
 
