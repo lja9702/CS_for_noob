@@ -36,7 +36,9 @@
 
    > 이때 JVM은 필요에 따라 스레드 동기화, GC 등의 관리작업을 수행
 
-<img src="image/JVM.png" width="80%" height="80%" />
+<p align="center">
+   <img src="image/JVM.png" width="80%" height="80%" />
+</
 
 </br>
 
@@ -74,7 +76,9 @@
 
 ### Java Memory Management
 
-<img src="image/runtime_data_areas.png" width="70%" height="70%" />
+<p align="center">
+   <img src="image/runtime_data_areas.png" width="70%" height="70%" >
+</p>
 
 - **JVM Stack**
 
