@@ -3,27 +3,22 @@
 > Java Byte Code를 실행할 수 있는 주체로, OS에 맞게 해석해주는 역할을 한다
 
 
-
-#### **JVM 이 중요한 이유?**
+**JVM 이 중요한 이유?**
 
 메모리를 효율적으로 사용하여 성능을 높이기 위해서는 JVM의 메모리 구조를 반드시 알아야한다.
+</br>
 
- 
-
-#### **JVM의 주요 기능**
+**JVM의 주요 기능**
 
 1. Byte Code는 JVM 위에서 OS 종류 상관없이 실행
 
 2. 프로그램 메모리를 관리하고 최적화 (*Garbage Collection*)
 
-
-
-
-
+</br>
 
 --------------------
 
-#### **Java 프로그램의 실행 과정**
+### **Java 프로그램의 실행 과정**
 
 1. 프로그램이 실행되면 JVM은 OS로 부터 프로그램이 필요로 하는 메모리를 할당 받는다
 
@@ -43,20 +38,19 @@
 
 <img src="image/JVM.png" width="80%" height="80%" />
 
-
-
+</br>
 
 
 -------------------------
 
-#### **JVM 구조**
+### **JVM 구조**
 
 - **Class Loader**
 
   > **Runtime 시점**에 java 바이트코드(`.class`)를 로딩하게 해주며, 
   > 클래스 인스턴스를 생성하면 클래스 로더를 통해 **메모리에 로드**
 
--  **Runtime Data Areas** `★ Java 메모리 영역` 
+- **Runtime Data Areas** `★ Java 메모리 영역` 
 
   > JVM이 프로그램을 수행하기 위해 **OS로 부터 별도로 할당 받은 메모리 공간**으로, 5가지 영역으로 나눠짐
   > 자세한 설명은 하단의 *Java Memory Management* 섹션 참고
@@ -73,12 +67,12 @@
   > 인터프리터 방식으로 실행하다가 적절한 시점에 바이트코드 전체를 컴파일하여 *네이티브 코드*로 변경하고, 이후에는 인터프리팅하지 않고 네이티브 코드로 직접 실행하는 방식
 
 
-
+</br>
 
 
 -------------
 
-#### Java Memory Management
+### Java Memory Management
 
 <img src="image/runtime_data_areas.png" width="70%" height="70%" />
 
@@ -88,8 +82,8 @@
 
   - {}나 메소드가 호출될 때 마다 각각의 스택 프레임(그 메서드만을 위한 공간)이 생성
   - 호출된 메소드의 매개변수, 지역변수, 리턴 값 및 연산 시 일어나는 값들을 임시로 저장
+</br>
 
-  
 
 - **Native Method Stack**
 
@@ -97,16 +91,17 @@
 
   - JAVA가 아닌 다른 언어로 작성된 코드를 위한 공간으로, JAVA Native Interface를 통해 바이트코드로 전환하여 저장
   - 이부분을 통해 C code를 실행시켜 Kernel에 접근 가능
+</br>
 
-  
+
 
 - **PC register**
 
   > 현재 수행중인 JVM명령의 주소를 가짐 (CPU의 PC와 같음)
 
   - Thread가 시작될 때 생성되며, 생성될 때 마다 생성되는 공간으로 스레드마다 하나씩 존재한다.
+</br>
 
-  
 
 - **Method 영역 (= Class area, Static area)**
 
@@ -128,8 +123,8 @@
   3. Type 정보
 
      > class인지 interface인지의 여부 저장, Type 속성, 전체 이름, super class의 전체 이름
+</br>
 
-     
 
 - **★Heap 영역**
 
@@ -155,8 +150,8 @@
   > - Metaspace는 Native memory 영역으로 **OS가 자동으로 크기를 조절**하며, 옵션으로 Metaspace의 크기를 줄일 수도 있다.
   > - 그 결과 기존과 비교해 큰 메모리 영역을 사용할 수 있게 되었다.
   > - JEP 122에서는 JRockit과 Hotspot을 통일시키기 위해 PermGen 영역을 삭제한다고 한다.
+</br>
 
-  
 
   1. **New/Young Generation**
 
@@ -164,21 +159,22 @@
 
      **Survivor 0/1**: Eden에서 참조되는 객체들이 저장되는 공간
 
-     
+  </br>
+
 
   2. **Old(Tenured) Generation**
 
      Young Generation에서 일정시간 이상 참조되고 있고 살아있는 객체들이 저장되는 공간
+</br>
 
-     
 
   3. **[~JAVA7] Permanent Generation**
 
      생성된 객체들의 정보들이 저장되는 공간으로, **메타데이터 저장 영역**이라고도 한다.
 
      (*클래스의 Meta정보/메소드의 Meta정보, Static 변수와 상수 정보*)
+</br>
 
-     
 
 
 
@@ -186,6 +182,9 @@
 
 *Heap Area: **객체**를 위한 공간*
 
+</br>
+
+</br>
 
 
 
