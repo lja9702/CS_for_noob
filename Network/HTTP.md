@@ -48,7 +48,9 @@
 
    +) **GET vs POST**
 
-   ![](image\GETvsPOST.png)
+   <p align="center">
+       <img src="image/GETvsPOST.png"/>
+   </p>
 
    </br>
 

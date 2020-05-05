@@ -4,7 +4,9 @@
 >
 > 이를 통해 **가용성 및 응답시간을 최적화**할 수 있다
 
-![](image/load_balancing.JPG)
+<p align="center">
+    <img src="image/load_balancing.JPG"/>
+</p>
 
 * **여러 서버에게 균등하게 트래픽을 분산**시켜주는 것이 로드밸런싱이다.
 * 트래픽에 대응하기 위한 방법
