@@ -58,7 +58,7 @@
 
 *위의 파일을 복사합니다.*
 
-<img src="./image/spark_3.png" alt="spark_3" style="zoom:70%;" /> 
+<img src="./img/spark_3.png" alt="spark_3" style="zoom:70%;" /> 
 
 *해당 파일을 C:\hadoop\bin 에 붙여넣습니다.*
 
