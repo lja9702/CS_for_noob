@@ -2,13 +2,12 @@
 
 > Java Byte Code를 실행할 수 있는 주체로, OS에 맞게 해석해주는 역할을 한다
 
-
-**JVM 이 중요한 이유?**
+### JVM 이 중요한 이유?
 
 메모리를 효율적으로 사용하여 성능을 높이기 위해서는 JVM의 메모리 구조를 반드시 알아야한다.
 </br>
 
-**JVM의 주요 기능**
+### JVM의 주요 기능
 
 1. Byte Code는 JVM 위에서 OS 종류 상관없이 실행
 
@@ -16,9 +15,7 @@
 
 </br>
 
---------------------
-
-### **Java 프로그램의 실행 과정**
+## Java 프로그램의 실행 과정
 
 1. 프로그램이 실행되면 JVM은 OS로 부터 프로그램이 필요로 하는 메모리를 할당 받는다
 
@@ -39,13 +36,9 @@
 <p align="center">
    <img src="image/JVM.png" width="80%" height="80%" />
 </
-
 </br>
 
-
--------------------------
-
-### **JVM 구조**
+## JVM 구조
 
 - **Class Loader**
 
@@ -71,48 +64,43 @@
 
 </br>
 
-
--------------
-
-### Java Memory Management
+## Java Memory Management
 
 <p align="center">
    <img src="image/runtime_data_areas.png" width="70%" height="70%" >
 </p>
+### JVM Stack
 
-- **JVM Stack**
+> 프로그램 실행과정에서 임시로 할당되었다가 메소드를 빠져나가면 바로 소멸되는 특성을 지닌 데이터를 저장하는 영역
 
-  > 프로그램 실행과정에서 임시로 할당되었다가 메소드를 빠져나가면 바로 소멸되는 특성을 지닌 데이터를 저장하는 영역
+- {}나 메소드가 호출될 때 마다 각각의 스택 프레임(그 메서드만을 위한 공간)이 생성
+- 호출된 메소드의 매개변수, 지역변수, 리턴 값 및 연산 시 일어나는 값들을 임시로 저장
+</br>
 
-  - {}나 메소드가 호출될 때 마다 각각의 스택 프레임(그 메서드만을 위한 공간)이 생성
-  - 호출된 메소드의 매개변수, 지역변수, 리턴 값 및 연산 시 일어나는 값들을 임시로 저장
+### Native Method Stack
+
+> 기계어로 작성된 프로그램을 실행시키는 영역
+
+- JAVA가 아닌 다른 언어로 작성된 코드를 위한 공간으로, JAVA Native Interface를 통해 바이트코드로 전환하여 저장
+- 이부분을 통해 C code를 실행시켜 Kernel에 접근 가능
 </br>
 
 
-- **Native Method Stack**
 
-  > 기계어로 작성된 프로그램을 실행시키는 영역
+### PC register ###
 
-  - JAVA가 아닌 다른 언어로 작성된 코드를 위한 공간으로, JAVA Native Interface를 통해 바이트코드로 전환하여 저장
-  - 이부분을 통해 C code를 실행시켜 Kernel에 접근 가능
+> 현재 수행중인 JVM명령의 주소를 가짐 (CPU의 PC와 같음)
+
+- Thread가 시작될 때 생성되며, 생성될 때 마다 생성되는 공간으로 스레드마다 하나씩 존재한다.
 </br>
 
+### Method 영역 (= Class area, Static area)
+
+> 클래스 정보를 처음 메모리 공간에 올릴 때, **초기화되는 대상을 저장하기 위한 메모리 공간**
 
 
-- **PC register**
-
-  > 현재 수행중인 JVM명령의 주소를 가짐 (CPU의 PC와 같음)
-
-  - Thread가 시작될 때 생성되며, 생성될 때 마다 생성되는 공간으로 스레드마다 하나씩 존재한다.
-</br>
-
-
-- **Method 영역 (= Class area, Static area)**
-
-  > 클래스 정보를 처음 메모리 공간에 올릴 때, **초기화되는 대상을 저장하기 위한 메모리 공간**
-
-  - 올라가게 되는 메소드의 Byte Code는 프로그램의 흐름을 구성하는 Byte Code
-  - *Runtime constant Pool*이라는 관리 영역도 함께 존재하며, 상수자료형을 저장하여 참조하고 중복을 막는 역할을 수행한다.
+- 올라가게 되는 메소드의 Byte Code는 프로그램의 흐름을 구성하는 Byte Code
+- *Runtime constant Pool*이라는 관리 영역도 함께 존재하며, 상수자료형을 저장하여 참조하고 중복을 막는 역할을 수행한다.
 
   **올라가는 정보의 종류**
 
@@ -127,33 +115,37 @@
   3. Type 정보
 
      > class인지 interface인지의 여부 저장, Type 속성, 전체 이름, super class의 전체 이름
-</br>
+
+     </br>
+
+### ★Heap 영역
+
+> **프로그램 상에서 데이터를 저장하기 위해** 런타임시 동적으로 할당하여 사용하는 가상 메모리 영역
+>
+> Method area에 로드된 클래스만 생성이 가능하고, **GC를 통해 메모리를 반환**
+
+- new연산자로 생성된 객체 또는 인스턴스와 배열 저장
+- JVM이 관리
+
+<p align="center">
+    <img src="image/heap_area.png" width="90%" height="90%" />
+</p>
 
 
-- **★Heap 영역**
 
-  > **프로그램 상에서 데이터를 저장하기 위해** 런타임시 동적으로 할당하여 사용하는 가상 메모리 영역
-  >
-  > Method area에 로드된 클래스만 생성이 가능하고, **GC를 통해 메모리를 반환**
+[**~JAVA7** 기준] Heap 영역: New/Young, Old, Permanent Generation
 
-  - new연산자로 생성된 객체 또는 인스턴스와 배열 저장
-  - JVM이 관리
+[**JAVA8~** 기준] Heap 영역: New/Young, Old Generation
 
-  <img src="C:/Users/lja97/Desktop/CS_for_noob/CS_for_noob/Language/image/heap_area.png" width="90%" height="90%" />
-
-  [**~JAVA7** 기준] Heap 영역: New/Young, Old, Permanent Generation
-
-  [**JAVA8~** 기준] Heap 영역: New/Young, Old Generation
-
-  > *부가 설명*
-  >
-  > - JDK 8부터 Permanent Heap 영역이 제거되고, 대신 Metaspace가 Native Memory에 추가됨
-  >
-  > - Perm은 JVM에 의해 크기가 강제되던 영역
-  >
-  > - Metaspace는 Native memory 영역으로 **OS가 자동으로 크기를 조절**하며, 옵션으로 Metaspace의 크기를 줄일 수도 있다.
-  > - 그 결과 기존과 비교해 큰 메모리 영역을 사용할 수 있게 되었다.
-  > - JEP 122에서는 JRockit과 Hotspot을 통일시키기 위해 PermGen 영역을 삭제한다고 한다.
+> *부가 설명*
+>
+> - JDK 8부터 Permanent Heap 영역이 제거되고, 대신 Metaspace가 Native Memory에 추가됨
+>
+> - Perm은 JVM에 의해 크기가 강제되던 영역
+>
+> - Metaspace는 Native memory 영역으로 **OS가 자동으로 크기를 조절**하며, 옵션으로 Metaspace의 크기를 줄일 수도 있다.
+> - 그 결과 기존과 비교해 큰 메모리 영역을 사용할 수 있게 되었다.
+> - JEP 122에서는 JRockit과 Hotspot을 통일시키기 위해 PermGen 영역을 삭제한다고 한다.
 </br>
 
 
@@ -179,8 +171,7 @@
      (*클래스의 Meta정보/메소드의 Meta정보, Static 변수와 상수 정보*)
 </br>
 
-
-
+-----------------
 
 *Method Area: **클래스 데이터**를 위한 공간*
 

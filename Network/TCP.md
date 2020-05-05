@@ -8,9 +8,9 @@
 >
 > 1:1의 소켓 연결 구조 
 
+</br>
 
-
-### **3 way handshake**
+## 3 way handshake
 
 <u>통신하기 앞서</u>, 논리적인 접속을 성립하기위해 3 way handshake 과정을 진행한다.
 
@@ -22,7 +22,7 @@
 
 출처: https://hyeonstorage.tistory.com/286
 
-
+</br>
 
 1.  Client에서 Server에 연결 요청을 하기위해 SYN(동기화) 패킷을 보낸다.
 
@@ -31,11 +31,10 @@
 
 3. Client가 ACK+SYN을 받고 ESTABLISHED로 상태를 변경하고, 서버에 요청을 잘 받았다는 ACK를 전송한다. ACK를 받은 서버는 ESTABLISHED로 변경된다.
 
-   
 
----------------
+</br>
 
-### **4 way handshake**
+## 4 way handshake
 
 <u>통신을 해제</u>하기 위해 4 way handshake 과정을 진행한다.
 
@@ -54,11 +53,10 @@ Server와 Client 모두 ESTABLISHED 상태
    
 5. 이후 둘다 Closed => 연결해제
 
-   
 
-----------------------
+</br>
 
-### **TCP 흐름제어**
+## TCP 흐름제어
 
 > TCP는 신뢰성있는 전송을 보장
 >
@@ -68,20 +66,22 @@ Server와 Client 모두 ESTABLISHED 상태
 >
 > 수신측이 주체
 
-#### 어떤 문제?
+### 어떤 문제?
 
 1. 각 소켓은 I/O 버퍼를 가지고 있다.
 2. 각 버퍼의 용량에는 한계가 존재한다.
 3. 만약 송신자의 처리 속도가 수신자보다 빠를 경우에는?
 4. 언젠가 수신자의 버퍼는 꽉차게 되고 나머지 데이터는 손실 ~~신뢰성의 TCP~~ 
 
-#### 방식
+</br>
+
+### 방식
 
 1. Stop and Wait 방식
 
 2. **Windowing 방식**
 
-   
+</br>
 
 #### **1. Stop and Wait**
 
@@ -91,7 +91,7 @@ Timeout 시간안에 ACK가 도착하면 그 다음 데이터를 전송
 
 하나 받고 하나 보내는 방식이기 때문에 **비효율적**
 
-
+</br>
 
 #### **2. Windowing 방식 (Sliding Window)**
 
@@ -109,7 +109,7 @@ TCP/IP를 사용하는 호스들은 Receive/Send 윈도우를 보유
 
 수신자의 Receive window 크기에 송신자의 Send window크기를 맞춤
 
-
+</br>
 
 1. 윈도우에 포함되는 모든 패킷을 일단 전송
 2. 수신자는 해당 패킷을 받았다고 송신자에게 ACK
