@@ -140,12 +140,11 @@
 > *부가 설명*
 >
 > - JDK 8부터 Permanent Heap 영역이 제거되고, 대신 Metaspace가 Native Memory에 추가됨
->
-> - Perm은 JVM에 의해 크기가 강제되던 영역
->
+>- Perm은 JVM에 의해 크기가 강제되던 영역
 > - Metaspace는 Native memory 영역으로 **OS가 자동으로 크기를 조절**하며, 옵션으로 Metaspace의 크기를 줄일 수도 있다.
-> - 그 결과 기존과 비교해 큰 메모리 영역을 사용할 수 있게 되었다.
+>- 그 결과 기존과 비교해 큰 메모리 영역을 사용할 수 있게 되었다.
 > - JEP 122에서는 JRockit과 Hotspot을 통일시키기 위해 PermGen 영역을 삭제한다고 한다.
+
 </br>
 
 
@@ -153,14 +152,15 @@
 
      **Eden**: 객체들이 최초로 생성되는 공간
 
-     **Survivor 0/1**: Eden에서 참조되는 객체들이 저장되는 공간
+     **Survivor 1/2**: Eden에서 참조되는 객체들이 저장되는 공간
 
-  </br>
+</br>
 
 
   2. **Old(Tenured) Generation**
 
      Young Generation에서 일정시간 이상 참조되고 있고 살아있는 객체들이 저장되는 공간
+
 </br>
 
 
@@ -169,6 +169,7 @@
      생성된 객체들의 정보들이 저장되는 공간으로, **메타데이터 저장 영역**이라고도 한다.
 
      (*클래스의 Meta정보/메소드의 Meta정보, Static 변수와 상수 정보*)
+
 </br>
 
 -----------------
@@ -180,8 +181,6 @@
 </br>
 
 </br>
-
-
 
 
 참고: https://asfirstalways.tistory.com/158
