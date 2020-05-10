@@ -34,7 +34,7 @@
 > **CaaS**: Container as a Service / 컨테이너를 실행하는 가상서버, 컨테이너 구축/배포/모니터링 등 종합 도구 제공
 
 <p align="center">
-    <img src="image/IaaS_PaaS_Saas.png" width="80%" height="80%" />
+    <img src="image/IaaS_PaaS_SaaS.png" width="80%" height="80%" />
     출처: http://cloudonmove.com
 </p></br>
 
