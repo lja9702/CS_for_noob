@@ -1,6 +1,6 @@
 # 컨테이너(Container)와 도커 (Docker)
 
->  컨테이너에 대해서 알아보기 전에 [가상화](https://github.com/lja9702/CS_for_noob/blob/noob/Cloud/Concept of Cloud.md)를 보고 오자
+>  컨테이너에 대해서 알아보기 전에 [가상화](https://github.com/lja9702/CS_for_noob/blob/noob/Cloud/Concept%20of%20Cloud.md)를 보고 오자
 
 ### 컨테이너 이전의 가상화
 
