@@ -171,16 +171,16 @@
 ```yaml
 ...
 spec:
-	replicas: 3			# replicas: 관리될 Pod의 수 
-	selector:			# selector: Pod들을 묶는 기준 (label)
-		app:nginx
-	template:			# template: Pod를 추가로 띄울 때, Pod정보 정의
-		...
-		containers:
-		- name: nginx
-		  image: nginx
-		  ports:
-		  - containerPort:80
+    replicas: 3			# replicas: 관리될 Pod의 수 
+    selector:			# selector: Pod들을 묶는 기준 (label)
+        app:nginx
+    template:			# template: Pod를 추가로 띄울 때, Pod정보 정의
+    ...
+        containers:
+        - name: nginx
+        image: nginx
+        ports:
+        - containerPort:80
 ```
 
 **Deployment**
