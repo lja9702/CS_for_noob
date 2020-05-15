@@ -1,18 +1,18 @@
 # OS
 
-### 1. [운영체제 역할](https://github.com/lja9702/CS_for_noob/blob/noob/OS/OS Role.md)
+### 1. [운영체제 역할](https://github.com/lja9702/CS_for_noob/blob/noob/OS/OS_Role.md)
 
 - 운영체제란?
 - 역할
 
-### 2. [프로세스(Process) vs 스레드(Thread)](https://github.com/lja9702/CS_for_noob/blob/noob/OS/Process vs Thread.md)
+### 2. [프로세스(Process) vs 스레드(Thread)](https://github.com/lja9702/CS_for_noob/blob/noob/OS/Process_Thread.md)
 
 - 프로세스 (Process)
   - 프로그램(Program)과 프로세스(Process)
   - 프로세스 주소 공간
 - 스레드 (Thread)
 
-### 3. [멀티 프로세싱 vs 멀티 태스킹 vs 멀티스레딩](https://github.com/lja9702/CS_for_noob/blob/noob/OS/multi-processing vs multi-tasking vs multi-threading.md)
+### 3. [멀티 프로세싱 vs 멀티 태스킹 vs 멀티스레딩](https://github.com/lja9702/CS_for_noob/blob/noob/OS/multi-processing_tasking_threading.md)
 
 - 멀티 프로세싱 (Multi Processing)
 - 멀티 태스킹 (Multi Tasking)
@@ -27,7 +27,7 @@
   - 선점 스케쥴링 (SRT, Round Robin, Multi-level Queue, Multi-level Feedback-Queue)
 - 스레드 스케쥴링
 
-### 5. [프로세스 병행성 (Process Concurrency)](https://github.com/lja9702/CS_for_noob/blob/noob/OS/Process Concurrency.md)
+### 5. [프로세스 병행성 (Process Concurrency)](https://github.com/lja9702/CS_for_noob/blob/noob/OS/Process_Concurrency.md)
 
 - 프로세스 동기화 (Process Synchronization)
   - 동기 (synchronous), 비동기 (asynchronous)
