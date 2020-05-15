@@ -32,7 +32,6 @@
 - 프로세스 동기화 (Process Synchronization)
   - 동기 (synchronous), 비동기 (asynchronous)
   - Blocking, Non-Blocking
-
 - 임계영역 (Critical Section)
 - 교착상태 (Deadlock)
 - 경쟁조건(race condition), 기아(starvation)
