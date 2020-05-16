@@ -1,6 +1,6 @@
-# 인공지능 vs 데이터 마이닝 vs 머신러닝
+# 인공지능, 데이터 마이닝, 머신러닝, 딥러닝
 
->  데이터 마이닝 (Data mining), 머신러닝(ML), 인공지능(AI)에 대해서 차이점을 명확하게 정리하겠다.
+>  데이터 마이닝 (Data mining), 머신러닝(ML), 인공지능(AI), 딥러닝에 대해서 차이점을 명확하게 정리하겠다.
 
 
 
@@ -76,8 +76,43 @@
 
 </br>
 
+## 딥러닝 (Deep Learning)
+
+> 여러 비선형 변환기법의 조합을 통해, 다량의 복잡한 자료들에서 핵심적인 내용만 추려내는 작업을 시도하는 머신러닝알고리즘의 집합을 의미
+>
+> **ANN, DNN, CNN, RNN, GAN** 등이 있다
+
+**ANN (Artificial Neural Network)**
+
+- 딥러닝은 인공신경망(, ANN)를 기초로 하고 있는데, 이는 **사람의 신경망 원리와 구조를 모방하여 만든 기계학습 알고리즘**이다.
+- 뇌의 뉴런들은 어떤 신호와 자극을 받았을때, 임계값(Threshold)를 넘어서면 결과신호를 전달하는데 이를 착안한 것이 ANN
+- *Input Data* 가 뇌에서의 자극/신호이며, *가중치(weight)* 가 임계값, *Output data* 가 자극에 의해 하는 행동이라고 생각하면 된다.
+
+<p align="center">
+    <img src="image/ANN.png" width="50%" height="50%" />
+    출처: https://medium.com/coinmonks/the-artificial-neural-networks-handbook-part-1-f9ceb0e376b4
+</p>
+
+- 입력층 (lnput Layer)와 출력층(Output Layer) 사이에 은닉층(Hidden Layer)가 존재하는데, 이 **은닉층의 개수와 노드의 개수를 구성하는 것이 모델을 구성**하는 것이다. 이때 모델을 잘 구성해서 Output값을 잘 예측하는 것이 우리가 할 일로, 은닉층에서는 활성화함수를 사용해 최적의 weight와 bias를 찾아낸다
+
+**DNN (Deep Neural Network)**
+
+- 은닉층을 2개이상 가진 학습방법을 DNN이라고 함
+- 컴퓨터가 스스로 **분류레이블**을 만들고, **공간을 왜곡**하고, **데이터를 구분**짓는 과정을 반복하여 최적의 구번선을 도출
+- DNN을 응용한 것이 CNN, RNN 등이다
+
+**CNN (Convolution Neural Network)**
+
+- 기존의 방식은 데이터에서 지식을 추출해서 학습했지만, **CNN은 데이터의 특징을 추출하여 특징들의 패턴을 파악하는 구조**이다
+- 크게 Convoultion 과정과 Pooling 과정을 통해 진행
+- 자세한 것은 [CNN](https://github.com/lja9702/CS_for_noob/blob/noob/ML_Cloud_BigData/ML-CNN.md) 참고
+
+ </br>
+
 출처 및 참고:
 
 [http://news.samsungdisplay.com/12538]()
 
 [https://subscription.packtpub.com/book/data/9781838826321/1/ch01lvl1sec01/defining-ai]()
+
+[https://ebbnflow.tistory.com/119]()
