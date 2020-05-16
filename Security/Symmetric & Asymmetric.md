@@ -4,7 +4,7 @@
 
 ### Symmetric key
 
-![](.\img\symmetric.JPG)
+![](./img/symmetric.JPG)
 
 * key 값 하나이므로 Encription과 Decription을 모두 수행한다. 
 
@@ -12,7 +12,7 @@
 
 ### Asymmetric key
 
-![](.\img\asymmetric.JPG)
+![](./img/asymmetric.JPG)
 
 * key 값이 두 개(public key와 private key)이다.  
 * Public key는encryption 할 때 사용하며 Private key는 decryption 할 때 사용한다.
