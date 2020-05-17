@@ -90,7 +90,7 @@
 
 <p align="center">
     <img src="image/ANN.png" width="50%" height="50%" />
-    출처: https://medium.com/coinmonks/the-artificial-neural-networks-handbook-part-1-f9ceb0e376b4
+    </br>출처: https://medium.com/coinmonks/the-artificial-neural-networks-handbook-part-1-f9ceb0e376b4</br>
 </p>
 
 - 입력층 (lnput Layer)와 출력층(Output Layer) 사이에 은닉층(Hidden Layer)가 존재하는데, 이 **은닉층의 개수와 노드의 개수를 구성하는 것이 모델을 구성**하는 것이다. 이때 모델을 잘 구성해서 Output값을 잘 예측하는 것이 우리가 할 일로, 은닉층에서는 활성화함수를 사용해 최적의 weight와 bias를 찾아낸다
