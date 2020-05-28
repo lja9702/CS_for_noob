@@ -55,7 +55,7 @@
 
   `Document 타입 : XML, JSON, YAML과 같이 구조화된 데이터 타입`
 
-  > MongoDB, CounchDB, Riak
+  > MongoDB, CounchDB, Riak ,Firebase Realtime Database
 
 
 
