@@ -126,7 +126,7 @@ K개의 채널에 대해 nxn convolution을 따로 진행해서 합친다.
 
 
 
-참고: [https://nbviewer.jupyter.org/github/Hyunjulie/KR-Reading-Image-Segmentation-Papers/blob/master/Xception설명과%20Pytorch구현.ipynb](https://nbviewer.jupyter.org/github/Hyunjulie/KR-Reading-Image-Segmentation-Papers/blob/master/Xception설명과 Pytorch구현.ipynb)
+참고: [https://nbviewer.jupyter.org/github/Hyunjulie/KR-Reading-Image-Segmentation-Papers/blob/master/Xception설명과%20Pytorch구현.ipynb]()
 
 [https://datascienceschool.net/view-notebook/0faaf59e0fcd455f92c1b9a1107958c4/]()
 
