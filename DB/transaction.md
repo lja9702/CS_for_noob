@@ -52,12 +52,20 @@
 
 - Active
 
-- Partially committed
+  → 트랜잭션이 실행 중일 때 가지는 상태
+
+- Partially committed 
+
+  → 마지막 명령문이 실행된 후의 상태
 
 - Aborted - END
 
+  → 트랜잭션이 취소되고 DB가 트랜잭션 시작 전 상태로 환원
+
 - Committed - END
 
+  → 성공적으로 완료된 상태
+  
   </br>
 
 ## 동시 실행
@@ -71,3 +79,11 @@
 2. 트랜잭션의 평균 응답 시간이 감소
 
 </br>
+
+## 트랜잭션 제어
+
+트랜잭션 제어 언어는 TCL(Transaction Control Language)이라고한다.
+
+- COMMIT : 트랜잭션 확정 (트랜잭션 메모리에 영구적으로 저장)
+- ROLLBACK : 트랜잭션 취소 (트랜잭션 내역 무효화)
+- CHECKPOINT : 저장 시기 설정 (ROLLBACK을 위한 시점 지정)
