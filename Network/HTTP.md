@@ -51,9 +51,8 @@
    <p align="center">
        <img src="image/GETvsPOST.png"/>
    </p>
-
-   </br>
-
+</br>
+   
 3. **PUT**
 
    - 서버에 리소스를 **업데이트**하거나 리소스가 없다면 새로운 리소스를 **생성**해달라고 요청
@@ -82,11 +81,23 @@
 
 20X: 통신 성공
 
+> 200 : Ok 요청이 성공적으로 됨
+
 30X: 리다이렉트
+
+> 301 : moved permanently 요청한 리소스의 url이 변경됨
 
 40X: 클라이언트 오류
 
+> 400 : Bad Request  잘못된 문법
+>
+> 404 : Not Found 요청한 리소스를 찾을 수 없음
+>
+> 429 : Too Many Request 지정된 시간에 너무 많은 요청을 보냄
+
 50X: 서버 오류
+
+> 505 : HTTP Version Not Supported
 
 </br>
 
