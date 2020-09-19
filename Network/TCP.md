@@ -53,6 +53,15 @@ Server와 Client 모두 ESTABLISHED 상태
    
 5. 이후 둘다 Closed => 연결해제
 
+</br>
+
+## Sequence Number
+
+**<u>ISN (Initial Sequence Number)은 난수로 설정</u>**한다. 
+
+클라이언트에서 SYN 패킷을 보낼 때는 랜덤한 난수가 생성된다. 
+
+순차적인 Number가 전송된다면 이전의 Connection으로 부터 오는 패킷으로 인식할 수 있기 때문에 ISN은 난수로 설정한다. 
 
 </br>
 
